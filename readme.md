@@ -20,7 +20,7 @@ No of overs and no of matches to be played is based on user input.
 
 ------------------------------------------------------------------------------------
 
-***Rules of this game:***
+***Rules:***
 
 ------------------------------------------------------------------------------------
 
@@ -89,6 +89,7 @@ Give the following command in the windows with MS visual studio environment
 2\. Command to build the source code
 
 *cmake --build .*
+
 
 
 
