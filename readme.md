@@ -46,7 +46,7 @@ During Bowling:
 
 User is prompted to enter a number between 0 to 6
 
-
+CPU will also generate a number between 0 t0 6
 
 If both the numbers are same , its a wicket else the CPU input will
 
@@ -89,6 +89,7 @@ Give the following command in the windows with MS visual studio environment
 2\. Command to build the source code
 
 *cmake --build .*
+
 
 
 
