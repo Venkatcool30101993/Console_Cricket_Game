@@ -59,8 +59,6 @@ void TeamSelection::buildPlayer()
     }
  vector<playerInfo> TeamSelection::getPlayerInfo()
  {
-    cout<<"TeamSelection::getPlayerInfo()"<<endl;
-    cout<<"vec size"<<vec_PlayerInformation.size()<<endl;
      return vec_PlayerInformation;
  }
 
