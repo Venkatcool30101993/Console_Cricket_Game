@@ -70,16 +70,26 @@ namespace TeamPlayer_NS
             break;
         }
     }
+
+
     void TeamPlayerInfo::displayScore(int score,int wickets,int balls,int batsmenscore,int index)
     {
 
-        if(batsmenscore == 0 && index ==0)
-        cout<<"Score"<<score<<"/"<<wickets<<" "<<"Overs"<<balls/6<<"."<<balls%6<<endl;
+        if (batsmenscore == DEFAULT_SCORE && index == DEFAULT_BATSMEN_INDEX) //For CPU opponent no need to show batsmen name
+        {
+            cout << "Score" << score << "/" << wickets << " " << "Overs" << (balls / BALLS_PER_OVER) << "." << (balls % BALLS_PER_OVER) << endl;
+        }
         else
         {
-
-           cout<<"Score"<<score<<"/"<<wickets<<" "<<"Overs"<<balls/6<<"."<<balls%6<<" "<<"Batting "<<team_information[index-1].name<<
-           "*"<<batsmenscore<<endl;
+            if ((index - 1) < team_information.size()) // Since the vector indexing starts from ZERO
+            {
+                cout << "Score" << score << "/" << wickets << " " << "Overs" << (balls / BALLS_PER_OVER) << "." << (balls % BALLS_PER_OVER) << " " << "Batting " << team_information[index - 1].name <<
+                    "*" << batsmenscore << endl;
+            }
+            else
+            {
+                cout << " Invalid Index" << index-1 <<endl;
+            }
         }
     }
 
@@ -88,7 +98,7 @@ namespace TeamPlayer_NS
         cout << "Here comes the scoreboard" << endl;
         cout << "----------------------------------------------------------" << endl;
         cout << "--BATSMEN--RUNS" << endl;
-        for(int i=0;i<5;i++)
+        for(int i=0;i<NO_OF_PLAYERS;i++)
         {
             auto itr = batsmen_runs.find(i);
             if(itr != batsmen_runs.end())
@@ -102,7 +112,7 @@ namespace TeamPlayer_NS
         }
         
 
-        cout << "------------------------------------------------------------" << endl;
+        cout << "-----------------------------------------------------------" << endl;
     }
 
     void TeamPlayerInfo::updateBatsmenScore(int index,int score)
@@ -118,5 +128,10 @@ namespace TeamPlayer_NS
          itr->second = score;
         }
 
+    }
+
+    void TeamPlayerInfo::clearBatsmenScore()
+    {
+        batsmen_runs.clear();
     }
 }

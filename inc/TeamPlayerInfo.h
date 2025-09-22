@@ -19,9 +19,10 @@ public:
     void showBowlingType(Bowling_TYPE btype);
     void showTypeInfo(Player_Type type);
     void showTeam(vector<playerInfo> vec_PlayerInfo);
-    void displayScore(int score,int wickets,int balls,int batsmenscore = 0,int index=0);
+    void displayScore(int score,int wickets,int balls,int batsmenscore = DEFAULT_SCORE,int index = DEFAULT_BATSMEN_INDEX);
     void displayScoreBoard();
     void updateBatsmenScore(int index, int score);
+    void clearBatsmenScore();
 };
 
 }
