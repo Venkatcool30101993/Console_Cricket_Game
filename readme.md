@@ -20,7 +20,7 @@ No of overs and no of matches to be played is based on user input.
 
 ------------------------------------------------------------------------------------
 
-***Rules:***
+***Rules of this game:***
 
 ------------------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ During Bowling:
 
 User is prompted to enter a number between 0 to 6
 
-CPU will also generate a number between 0 t0 6
+
 
 If both the numbers are same , its a wicket else the CPU input will
 
@@ -92,7 +92,8 @@ Give the following command in the windows with MS visual studio environment
 
 
 
-
-
-
+3.Unit Testing done with GTEST framework for few functions in TestPlayerInfo.cpp
+(Unit testcases in tst/Test.cpp file) and appropriate CMakeLists are 
+added in tst/CMakeLists.txt and also the reference of Unit testing results is
+available in UnitTest_UsingGTESTFramework_Execution_Results.pdf attached
 
